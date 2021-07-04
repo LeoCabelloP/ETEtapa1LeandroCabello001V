@@ -1,0 +1,57 @@
+{% extends 'voluntarios/base.html' %}
+
+{% block contenido %}
+
+{% load static %}
+
+
+<div class="container2 mx-5">
+  <h2 class="text-center" style="color: #33bbff">Galería</h2>
+  <hr>
+</div>
+
+<div class="row mx-5 p-5" id="galeria">
+  <div class="container col-lg-4">
+    <img src="{% static 'voluntarios/img/1.jpg' %}" alt="Avatar" class="image">
+    <div class="overlay">
+      <div class="text">Puedes ser voluntario para grupos de ayuda, acompañar a personas que se sientan solas</div>
+    </div>
+  </div>
+
+  <div class="container col-lg-4">
+    <img src="{% static 'voluntarios/img/2.jpg' %}" alt="Avatar" class="image">
+    <div class="overlay">
+      <div class="text">Puedes llevarle las compras a ese vecino que no puede salir por miedo a contagiarse</div>
+    </div>
+  </div>
+
+  <div class="container col-lg-4">
+    <img src="{% static 'voluntarios/img/3.jpg' %}" alt="Avatar" class="image">
+    <div class="overlay">
+      <div class="text">El trabajo en comunidad es esencial para sobrevivir</div>
+    </div>
+  </div>
+
+  <div class="container col-lg-4">
+    <img src="{% static 'voluntarios/img/4.jpg' %}" alt="Avatar" class="image">
+    <div class="overlay">
+      <div class="text">Existen personas que necesitan ayuda con la limpieza de su hogar, por alguna discapacidad o
+        falta de tiempo. Tú podrías ayudarlos</div>
+    </div>
+  </div>
+
+  <div class="container col-lg-4">
+    <img src="{% static 'voluntarios/img/5.jpg' %}" alt="Avatar" class="image">
+    <div class="overlay">
+      <div class="text">Si tienes conocimientos que entregar, este será tu lugar favorito</div>
+    </div>
+  </div>
+
+  <div class="container col-lg-4">
+    <img src="{% static 'voluntarios/img/6.jpg' %}" alt="Avatar" class="image">
+    <div class="overlay">
+      <div class="text">Si todos nos ayudamos, llegaremos lejos</div>
+    </div>
+  </div>
+</div>
+{% endblock %}

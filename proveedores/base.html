@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="es">
+<head>
+
+  <title>Inicio</title>   
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <!-- Custom fonts for this theme -->
+  {% load static %}
+
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  <link href="{% static 'voluntarios/css/bootstrap.min.css' %}" type="text/css" rel="stylesheet">
+  <script src="https://kit.fontawesome.com/4c2cfb7421.js" crossorigin="anonymous"></script>
+  <script src="https://code.jquery.com/jquery-3.6.0.js" 
+    integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+  
+  <link href="{% static 'voluntarios/css/estilos.css' %}" rel="stylesheet">
+
+</head>
+
+<body>
+
+  <nav class="navbar navbar-expand-sm navbar-light ">
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#opciones">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <!-- logo -->
+    <a class="navbar-brand" href="#">
+      <img src="{% static 'voluntarios/img/loguito.png' %}" height="60" width="105">
+    </a>
+    <!-- enlaces -->
+    <div class="collapse navbar-collapse" id="opciones">   
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link" href="{% url 'index' %}">Inicio</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="{% url 'index3' %}">Galería de fotos</a>
+          </li>  
+          <li class="nav-item">
+            <a class="nav-link" href="{% url 'crearusuario' %}">Registro</a>
+          </li>  
+          <li class="nav-item">
+            <a class="nav-link" href="{% url 'ver' %}">Ver y modificar usuarios</a>
+          </li> 
+        </ul>
+    </div>
+  </nav>
+
+  <div id='contenido'>
+  {% block contenido %}
+  {% endblock %}
+  </div>  
+  
+  <footer class="mt-5">
+    <h5>Nicol Arancibia - Leandro Cabello - Rodrigo Ponce / @Copyright Derechos reservados.</h5>
+    <i class="fab fa-facebook fa-2x mx-2 mt-3"></i> <i class="fab fa-instagram fa-2x mx-2 mt-3"></i> <i class="fab fa-twitter-square fa-2x mx-2 mt-3"></i> 
+  </footer>
+  
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>  
+</body>
+</html>

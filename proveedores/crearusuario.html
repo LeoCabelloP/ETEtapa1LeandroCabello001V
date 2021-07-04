@@ -1,0 +1,146 @@
+{% extends 'voluntarios/base.html' %}
+{% load static %}
+{% block contenido %}
+
+<script>
+$(function() 
+      {
+        $("#registro").validate({
+          rules: {
+                    rutUsuario:    {
+                        required: true,
+                    },
+                    nombreUsuario: {
+                        required: true,
+                    },
+                    fechaNac: {
+                      required: true,
+                    },
+                    region: {
+                      required: true,
+                    },
+                    comuna: {
+                      required: true,
+                    },
+                    email: {
+                        required: true,
+                        email: true
+                    },
+                    email2:{
+                      required: true,
+                      equalTo: "#email",
+                    },
+                    password: {
+                      required: true,
+                      password: true,
+                    },
+                    
+                    password2: {
+                        required: true,
+                        equalTo: "#password"
+                    },   
+                    fono: "required",
+
+                }, //rules
+          
+            messages: {
+                rutUsuario:    {
+                  required: 'Ingrese su rut con guión y sin puntos'
+                },
+                nombreUsuario: {
+                  required: 'Ingresa tu nombre y apellidos'
+                },
+                email: {
+                    required: 'Ingresa tu correo electrónico',
+                    email: 'Formato de correo no válido'
+                },
+                email2: {
+                  required: 'Reingresa tu correo electrónico',
+                  email: 'Formato de correo no válido',
+                  equalTo:'Los correos no coinciden'
+                },
+                password: {
+                    required: 'Ingresa una contraseña',
+                    minlength: 'Caracteres insuficientes'
+                },
+                fono:{
+                    required: 'Ingrese un número de celular',
+                    minlength: 'Cantidad de digitos insuficiente'
+                },
+                fechanac:{
+                    required: 'Seleccione una fecha válida',
+                    min: 'Fecha no corresponde'
+                },
+                password2: {
+                    required: 'Reingresa la contraseña',
+                    equalTo: 'Las contraseñas ingresadas no coinciden',
+                    minlength: 'Caracteres insuficientes'
+                },
+                region: {
+                  required: 'Ingresa el nombre de tu región'
+                },
+                comuna: {
+                  required: 'Ingresa el nombre de tu comuna'
+                }  
+                
+            }//messages
+          }); //$('#mi-formulario').validate
+      }); //function
+</script>
+<form id="registro" action="#" method="POST">
+    {% csrf_token %}
+    <div class="container" id="formregistro">
+        <div class="title">Ingresa tus datos</div>
+        <div class="col" id="formularioregistro">
+                 
+    <div class="datos-usuario">
+      <div class="input-box">
+        {{usuario.nombreUsuario.label}}
+        {{usuario.nombreUsuario}}
+      </div>
+      <div class="input-box">
+        {{usuario.rutUsuario.label}}
+        {{usuario.rutUsuario}}
+      </div>
+      <div class="input-box">
+        {{usuario.fechaNac.label}}
+        {{usuario.fechaNac}}
+      </div>
+      <div class="input-box">
+        {{usuario.region.label}}
+        {{usuario.region}}
+      </div>
+      <div class="input-box">
+        {{usuario.comuna.label}}
+        {{usuario.comuna}}
+      </div>
+      <div class="input-box">
+        {{usuario.email.label}}
+        {{usuario.email}}
+      </div>
+      <div class="input-box">
+        {{usuario.email2.label}}
+        {{usuario.email2}}
+      </div>
+      <div class="input-box">
+        {{usuario.password.label}}
+        {{usuario.password}}
+      </div>
+      <div class="input-box">
+        {{usuario.password2.label}}
+        {{usuario.password2}}
+      </div>
+      <div class="input-box">
+        {{usuario.fono.label}}
+        {{usuario.fono}}
+      </div>
+
+      <div class="button">
+        <input type="submit" value="Enviar"><br><br>
+      </div>
+      
+    </div>
+  </form>     
+</div>
+
+{% endblock %}

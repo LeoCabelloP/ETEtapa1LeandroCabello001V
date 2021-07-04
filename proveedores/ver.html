@@ -1,0 +1,44 @@
+{% extends 'voluntarios/base.html' %}
+{% load static %}
+{% block contenido %}
+
+    <div class="row">
+        <h1>Mostrando datos usuario</h1>
+      </div>
+      <table class="table">
+        <thead>
+          <tr>
+            <th scope="col">Rut</th>
+            <th scope="col">Nombre</th>
+            <th scope="col">Fecha nacimiento</th>
+            <th scope="col">Región</th>
+            <th scope="col">Comuna</th>
+            <th scope="col">Correo electrónico</th>
+            <th scope="col">Número de teléfono</th>
+          </tr>
+        </thead>
+    <tbody>
+        {%for us in usuarios%}
+            <tr>
+                <td>{{us.rutUsuario}}</td>
+                <td>{{us.nombreUsuario}}</td>
+                <td>{{us.fechaNac}}</td>
+                <td>{{us.region}}</td>
+                <td>{{us.comuna}}</td>
+                <td>{{us.email}}</td>
+                <td>{{us.fono}}</td>
+                <td><a href="{% url 'form_mod_usuario' us.rutUsuario%}" class="btn btn-primary">Modificar</a></td>
+                <td><a href="{% url 'form_del_usuario' us.rutUsuario%}" class="btn btn-danger">Eliminar</a></td>
+            </tr>
+        {%endfor%}
+
+    </tbody>
+
+
+
+        </table>
+      </div>            
+
+
+
+{% endblock %} 
