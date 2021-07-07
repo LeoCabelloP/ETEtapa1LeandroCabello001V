@@ -1,0 +1,58 @@
+{% extends 'proveedores/base.html' %}
+
+{% block contenido %}
+
+{% load static %}
+
+
+<div class="container2 mx-5">
+  <h2 class="text-center" style="color: #33bbff">"GROUND ZERO"</h2>
+  <br><h4>Somos una cooperativa artística, con la que puedes contactarte para que nosotros promovamos tus servicios.</h4>
+  <br><h4>Revisa a continuación de qué se trata nuestra cooperativa.</h4>
+  <hr>
+</div>
+
+<div class="row mx-5 p-5" id="galeria">
+  <div class="container col-lg-4">
+    <img src="{% static 'proveedores/img/1.jpg' %}" alt="Avatar" class="image">
+    <div class="overlay">
+      <div class="text">¿Necesitas realizar grabados o impresiones?</div>
+    </div>
+  </div>
+
+  <div class="container col-lg-4">
+    <img src="{% static 'proveedores/img/2.jpg' %}" alt="Avatar" class="image">
+    <div class="overlay">
+      <div class="text">¿Necesitas editar un libro?</div>
+    </div>
+  </div>
+
+  <div class="container col-lg-4">
+    <img src="{% static 'proveedores/img/3.jpg' %}" alt="Avatar" class="image">
+    <div class="overlay">
+      <div class="text">Además apoyamos investigaciones históricas, para promover una vinculación con el medio</div>
+    </div>
+  </div>
+
+  <div class="container col-lg-4">
+    <img src="{% static 'proveedores/img/4.jpg' %}" alt="Avatar" class="image">
+    <div class="overlay">
+      <div class="text">Contamos con gran presencia en ferias de arte y exposiciones colectivas</div>
+    </div>
+  </div>
+
+  <div class="container col-lg-4">
+    <img src="{% static 'proveedores/img/5.jpg' %}" alt="Avatar" class="image">
+    <div class="overlay">
+      <div class="text">¿Tienes una banda? Podemos ayudarte a gestionar ensayos y contactar productoras</div>
+    </div>
+  </div>
+
+  <div class="container col-lg-4">
+    <img src="{% static 'proveedores/img/7.jpg' %}" alt="Avatar" class="image">
+    <div class="overlay">
+      <div class="text">Promovemos todo tipo de manifestaciones artísticas</div>
+    </div>
+  </div>
+</div>
+{% endblock %}

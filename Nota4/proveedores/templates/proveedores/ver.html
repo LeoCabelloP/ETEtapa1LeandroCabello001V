@@ -1,0 +1,50 @@
+{% extends 'proveedores/base.html' %}
+{% load static %}
+{% block contenido %}
+
+    <div class="row">
+        <h1>Mostrando datos usuario</h1>
+      </div>
+      <table class="table">
+        <thead>
+          <tr>
+            <th scope="col">Identificación</th>
+            <th scope="col">Logo proveedor</th>
+            <th scope="col">Nombre</th>
+            <th scope="col">Fono</th>
+            <th scope="col">Dirección</th>
+            <th scope="col">Región</th>
+            <th scope="col">Email</th>
+            <th scope="col">País</th>
+            <th scope="col">Contraseña</th>
+            <th scope="col">Moneda de pago</th>
+          </tr>
+        </thead>
+    <tbody>
+        {%for us in usuarios%}
+            <tr>
+                <td>{{us.numId}}</td>
+                <td>{{us.logoProveedor}}</td>
+                <td>{{us.nombre}}</td>
+                <td>{{us.fono}}</td>
+                <td>{{us.direccion}}</td>
+                <td>{{us.region}}</td>
+                <td>{{us.email}}</td>
+                <td>{{us.pais}}</td>
+                <td>{{us.contrasenna}}</td>
+                <td>{{us.moneda_pago}}</td>
+                <td><a href="{% url 'form_mod_usuario' us.numId%}" class="btn btn-primary">Modificar</a></td>
+                <td><a href="{% url 'form_del_usuario' us.numId%}" class="btn btn-danger">Eliminar</a></td>
+            </tr>
+        {%endfor%}
+
+    </tbody>
+
+
+
+        </table>
+      </div>            
+
+
+
+{% endblock %} 

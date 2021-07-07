@@ -1,0 +1,168 @@
+{% extends 'proveedores/base.html' %}
+{% load static %}
+{% block contenido %}
+
+<script>
+$(function() 
+      {
+        $("#registro").validate({
+          rules: {
+                    numId:        {
+                        required: true,
+                    },
+                    logoProveedor: {
+                        required: true,
+                    },
+                    nombre: {
+                      required: true,
+                    },
+                    fono: {
+                      required: true,
+                    },
+                    direccion: {
+                      required: true,
+                    },
+                    region: {
+                      required: true,
+                    },
+                    email: {
+                        required: true,
+                        email: true
+                    },
+                    email2:{
+                      required: true,
+                      equalTo: "#email",
+                    },
+                    pais: {
+                      required: true,
+                    },
+                    contrasenna: {
+                      required: true,
+                      password: true,
+                    },
+                    
+                    contrasenna2: {
+                        required: true,
+                        equalTo: "#contrasenna"
+                    },   
+                    moneda_pago: "required",
+
+                }, //rules
+          
+            messages: {
+                numId:    {
+                  required: 'Ingrese su ID con guión y sin puntos'
+                },
+                logoProveedor: {
+                  required: 'Ingresa un archivo de imagen con su logo o el de su compañía'
+                },
+                nombre: {
+                  required: 'Ingrese su nombre completo'
+                },
+                fono:{
+                    required: 'Ingrese un número de celular',
+                    minlength: 'Cantidad de digitos insuficiente'
+                },
+                direccion: {
+                  required: 'Ingresa tu dirección'
+                },
+                region: {
+                  required: 'Ingresa el nombre de tu región'
+                },
+                email: {
+                    required: 'Ingresa tu correo electrónico',
+                    email: 'Formato de correo no válido'
+                },
+                email2: {
+                  required: 'Reingresa tu correo electrónico',
+                  email: 'Formato de correo no válido',
+                  equalTo:'Los correos no coinciden'
+                },
+                pais: {
+                  required: 'Ingresa tu país'
+                },  
+                contrasenna: {
+                    required: 'Ingresa una contraseña',
+                    minlength: 'Caracteres insuficientes'
+                },
+                contrasenna2: {
+                    required: 'Reingresa la contraseña',
+                    equalTo: 'Las contraseñas ingresadas no coinciden',
+                    minlength: 'Caracteres insuficientes'
+                },
+                moneda_pago: {
+                  required: 'Ingresa la moneda que usarás para pagar: (Peso/Dólar)'
+                }  
+                
+            }//messages
+          }); //$('#mi-formulario').validate
+      }); //function
+</script>
+<form id="registro" action="#" method="POST" enctype="multipart/form-data">
+    {% csrf_token %}
+    <div class="container" id="formregistro">
+        <div class="title">Ingresa tus datos</div>
+        <div class="col" id="formularioregistro">
+                 
+    <div class="datos-usuario">
+      <div class="input-box">
+        {{usuario.numId.label}}
+        {{usuario.numId}}
+      </div>
+      <div>
+        <label>Ingrese su logo o el de su empresa</label>
+        <br><input type="file" name="logoProveedor" id="logoProveedor">
+      
+      </div>
+      <br>
+      <div class="input-box">
+        {{usuario.nombre.label}}
+        {{usuario.nombre}}
+      </div>
+      <div class="input-box">
+        {{usuario.fono.label}}
+        {{usuario.fono}}
+      </div>
+      <div class="input-box">
+        {{usuario.direccion.label}}
+        {{usuario.direccion}}
+      </div>
+      <div class="input-box">
+        {{usuario.region.label}}
+        {{usuario.region}}
+      </div>
+      <div class="input-box">
+        {{usuario.email.label}}
+        {{usuario.email}}
+      </div>
+      <div class="input-box">
+        {{usuario.email2.label}}
+        {{usuario.email2}}
+      </div>
+      <div class="input-box">
+        {{usuario.pais.label}}
+        {{usuario.pais}}
+      </div>
+      <div class="input-box">
+        {{usuario.contrasenna.label}}
+        {{usuario.contrasenna}}
+      </div>
+      <div class="input-box">
+        {{usuario.contrasenna2.label}}
+        {{usuario.contrasenna2}}
+      </div>
+      <div class="input-box">
+        {{usuario.moneda_pago.label}}
+        {{usuario.moneda_pago}}
+      </div>
+
+
+      <div class="button">
+        <input type="submit" value="Enviar"><br><br>
+      </div>
+      
+    </div>
+  </form>     
+</div>
+
+{% endblock %}

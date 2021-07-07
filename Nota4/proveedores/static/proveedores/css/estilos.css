@@ -1,0 +1,215 @@
+body {
+  min-height: 400px;
+  margin-bottom: 100px;
+  clear: both;
+}
+
+.fondo{
+    background-color: blue;
+} 
+
+div {
+    color:oscuro(this);
+    background-color: oscuro(this);
+}
+
+.color{
+  color: white;
+}
+
+footer {
+  align-self: center;
+  position: relative;
+  padding-top: 12px;
+  padding-bottom: 12px;
+  left: 0;
+  bottom: 0;
+  text-align: center;
+  width: 100%;
+}
+
+#galeria img{
+    width: 80%;
+    height: 80%;
+    margin: 10%;
+}
+
+#galeria .col-lg-4 {
+    padding: 20px;
+    margin: 0 !important;
+}
+
+.card-body{
+  height: 23%;
+}
+
+#navv li a{
+  color:#008CBA;
+}
+
+#api {
+  border: 40px;
+  padding: 35px;
+  background-color: whitesmoke;
+}
+
+#texto2index {
+  background-color: aliceblue;
+  border-radius: 15px;
+}
+
+#cardsbio {
+  border-color: #1f1f1f;
+  border-width: 15px;
+}
+
+.container {
+    position: relative;
+    width: 50%;
+}
+
+.container2 {
+  padding-left: 15%;
+  padding-right: 15%;
+}
+  
+.image {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+  
+.overlay {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 80%;
+  width: 80%;
+  opacity: 0;
+  transition: .5s ease;
+  margin:10%;
+  background-color: #008CBA;
+}
+
+.container:hover .overlay {
+  opacity: 1;
+}
+  
+.text {
+  color: white;
+  background-color: #008CBA ;
+  font-size: 15px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+.iframe-container{
+  position: relative;
+  width: 50%;
+  padding-bottom: 70%; 
+  display: block;
+  margin: 0 auto;
+}
+
+.iframe-container iframe{
+  position: absolute;
+  top:0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+#formularioregistro #registroproducto {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 25px 30px;
+  border-radius: 5px;
+  border: 5px;
+}
+
+#formregistro #formproducto .container {
+  max-width: 400px;
+  width: 100%;
+  padding: 40px 30px; 
+}
+
+.container .title {
+  font-size: 25px;
+  font-weight: 500;
+  position: relative;
+  bottom: 17px;
+  margin-top: 7px;
+}
+
+.container .title::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: 3px;
+  width: 30px;
+  background: linear-gradient(135deg, #71b7e6, #9b59b6);
+}
+
+.container form .datos-usuario {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding: 15px;
+  margin: 20px 0 12px 0;
+}
+
+form .datos-usuario .input-box {
+  width: calc(100% / 2 - 20px);
+  margin-bottom: 15px;
+}
+
+.datos-usuario .input-box input {
+  height: 45px;
+  width: 100%;
+  outline: none;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  padding-left: 15px;
+  font-size: 15px;
+}
+
+.input-box label {
+  font-weight: 500;
+  margin-bottom: 5px;
+}
+
+form .button {
+  height: 45px;
+  margin: 45px 0;
+  height: 100%;
+  width: 100%;
+}
+
+form .button input {
+  height: 100%;
+  width: 100%;
+  outline: none;
+  color: #fff;
+  border: none;
+  font-size: 18px;
+  font-weight: 500;
+  letter-spacing: 1px;
+  border-radius: 5px;
+  background: linear-gradient(135deg, #71b7e6, #9b59b6);
+  padding: 5px;
+}
+
+.oscuro{ 
+  background-color: #1f1f1f; 
+  color: #f1eded;
+}
+
